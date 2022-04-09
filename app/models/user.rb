@@ -11,13 +11,13 @@ class User < ApplicationRecord
   private
 
   def set_access_level
-    privileged ||= AccessLevel.where(name: 'privileged').first.id
-    ordinary ||= AccessLevel.where(name: 'ordinary').first.id
+    privileged ||= AccessLevel.find_by(name: 'privileged')
+    ordinary ||= AccessLevel.find_by(name: 'ordinary')
 
     if email.eql?('buna@buna.com')
-      self.access_level_id = privileged
+      self.access_level_id = privileged.id
     else
-      self.access_level_id = ordinary
+      self.access_level_id = ordinary.id
     end
   end
 end
