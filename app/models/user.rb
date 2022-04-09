@@ -15,7 +15,7 @@ class User < ApplicationRecord
     ordinary ||= AccessLevel.where(name: 'ordinary').first.id
 
     if email.eql?('buna@buna.com')
-      self.access_level_id = priviledged
+      self.access_level_id = privileged
     else
       self.access_level_id = ordinary
     end
