@@ -6,7 +6,7 @@ class UsersController < ActionController::Base
   def create
     @user = User.new(create_params)
     if @user.save
-      redirect_to root_url
+      redirect_to root_url, notice: 'User successfully created'
     else
       render :new
     end

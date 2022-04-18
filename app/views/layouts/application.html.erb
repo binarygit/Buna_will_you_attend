@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <% unless flash.empty? %>
+      <ul>
+      <% flash.each do |type, msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    <% end %>
     <%= yield %>
   </body>
 </html>
