@@ -11,13 +11,27 @@
   </head>
 
   <body>
+
     <% unless flash.empty? %>
       <ul>
-      <% flash.each do |type, msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% flash.each do |type, msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     <% end %>
+
+
+    <nav>
+      <ul>
+        <li><%= link_to :Home, root_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to :logout, logout_path %></li>
+        <% else %>
+          <li><%= link_to :login, login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+
     <div class="container">
       <%= yield %>
     </div>

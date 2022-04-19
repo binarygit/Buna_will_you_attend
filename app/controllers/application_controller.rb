@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
+  helper_method :current_user, :logged_in?
+
+  private
 
   def current_user
     if session[:user_id]
@@ -10,6 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    true if @current_user
+    true if current_user
   end
 end
