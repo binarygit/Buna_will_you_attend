@@ -1,17 +1,15 @@
-<main class='form-container'>
-    <h1>Login</h1>
-    
-    <%= form_with url: '/sessions', method: 'post' do |f| %>
-      <div>
-        <%= f.label :email %>
-        <%= f.email_field :email %>
-      </div>
-      <div>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-      </div>
-      <div>
-        <%= f.submit :login %>
-      </div>
-    <% end %>
-</main>
+<h1>Login</h1>
+
+<%= form_with url: '/sessions', method: 'post' do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.submit :login %>
+  </div>
+<% end %>

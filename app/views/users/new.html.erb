@@ -1,52 +1,37 @@
-<main>
-  <section>
-    <h1>Sign Up</h1>
+<section>
+  <h1>Sign Up</h1>
 
-    <% unless @user.errors.empty? %>
-      <section>
-        <h2>Error Messages</h2>
-        <ul>
-          <% @user.errors.full_messages.each do |error| %>
-            <li><%= error %></li>
-          <% end %>
-        </ul>
-      </section>
-    <% end %>
-
+  <% unless @user.errors.empty? %>
     <section>
-      <h2>Sign Up Form</h2>
-      <%= form_with model: @user do |f| %>
-        <div>
-          <%= f.label :username %><br>
-          <%= f.text_field :username %>
-        </div>
-        <div>
-          <%= f.label :email %><br>
-          <%= f.email_field :email %>
-        </div>
-        <div>
-          <%= f.label :password %><br>
-          <%= f.password_field :password %>
-        </div>
-        <div>
-          <%= f.label :password_confirmation %><br>
-          <%= f.password_field :password_confirmation %>
-        </div>
-        <%= f.submit %>
-      <% end %>
+      <h2>Error Messages</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
     </section>
+  <% end %>
+
+  <section>
+    <h2>Sign Up Form</h2>
+    <%= form_with model: @user do |f| %>
+      <div>
+        <%= f.label :username %><br>
+        <%= f.text_field :username %>
+      </div>
+      <div>
+        <%= f.label :email %><br>
+        <%= f.email_field :email %>
+      </div>
+      <div>
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+      </div>
+      <div>
+        <%= f.label :password_confirmation %><br>
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <%= f.submit %>
+    <% end %>
   </section>
-</main>
-
-<style>
-.field_with_errors {
-  display: inline;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-</style>
+</section>

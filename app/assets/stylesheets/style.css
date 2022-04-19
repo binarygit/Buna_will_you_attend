@@ -50,3 +50,12 @@ nav ul {
 nav ul li {
   padding: 10px;
 }
+
+.tagline {
+  font-size: 0.6em;
+  color: green;
+}
+
+.field_with_errors {
+  display: inline;
+}
