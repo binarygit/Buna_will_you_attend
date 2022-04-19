@@ -1,3 +1,15 @@
+html {
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100%;
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +19,34 @@
   width: 1200px;
   margin: 0 auto;
   padding-top: 15px;
+  background: green;
+  height: 100%;
+}
+
+.flash {
+  padding: 6px;
+}
+
+.notice {
+  background: blue;
+}
+
+.alert {
+  background: red;
+}
+
+ul {
+  list-style: none;
+}
+
+nav ul {
+  background: grey;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+nav ul li {
+  padding: 10px;
 }

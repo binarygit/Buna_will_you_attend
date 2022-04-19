@@ -12,14 +12,13 @@
 
   <body>
 
-    <% unless flash.empty? %>
-      <ul>
-        <% flash.each do |type, msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+    <% if flash[:notice] %>
+      <p class='flash notice'><%= flash[:notice] %></p>
     <% end %>
 
+    <% if flash[:alert] %>
+      <p class='flash alert'><%= flash[:alert] %></p>
+    <% end %>
 
     <nav>
       <ul>
