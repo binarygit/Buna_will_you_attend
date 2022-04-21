@@ -49,6 +49,7 @@ nav {
     display: flex;
     justify-content: flex-end;
   }
+
   li {
     padding: 10px;
   }
@@ -78,7 +79,10 @@ form {
   flex-direction: column;
 
   div {
+    display: flex;
+    flex-direction: column;
     width: 40%;
+    margin: 20px 0;
 
     input {
       width: 45%;
@@ -86,11 +90,21 @@ form {
   }
 }
 
-input[type="submit"] {
+input:focus-visible {
+  outline: 2px solid $yellow;
+}
+
+input[type="submit"]
+{
   padding: 7px;
   width: 25%;
-  border-radius: 5px;
-  border: 1px solid;
+  border: 2px solid;
+  background: white;
+
+  &:hover {
+    border-color: $yellow;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 600px) {
@@ -107,6 +121,6 @@ input[type="submit"] {
   }
 
   input[type='submit'] {
-    width: 17%;
+    width: 20%;
   }
 }
