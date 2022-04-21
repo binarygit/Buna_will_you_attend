@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;600&display=swap');
 
+$yellow: #FFE000;
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,6 @@
 
 html {
   font-size: 10px;
-  width: 100%;
   height: 100%;
 }
 
@@ -58,8 +59,11 @@ nav {
     padding: 10px;
 
     &:hover {
-      text-decoration: underline #FFE000 0.2rem;
+      text-decoration: underline $yellow 0.2rem;
+    }
 
+    &:focus-visible {
+      outline: 2px solid $yellow;
     }
   }
 
@@ -72,7 +76,6 @@ nav {
 form {
   display: flex;
   flex-direction: column;
-  background: blue;
 
   div {
     width: 40%;
@@ -84,9 +87,26 @@ form {
 }
 
 input[type="submit"] {
-  background: rebeccapurple;
   padding: 7px;
   width: 25%;
   border-radius: 5px;
   border: 1px solid;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 4px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  form div {
+    width: 100%;
+  }
+
+  input[type='submit'] {
+    width: 17%;
+  }
 }
