@@ -1,6 +1,6 @@
 <h1>Login</h1>
 
-<%= form_with url: '/sessions', method: 'post' do |f| %>
+<%= form_with url: '/sessions', method: 'post', data: {turbo: false} do |f| %>
   <div>
     <%= f.label :email %>
     <%= f.email_field :email %>
