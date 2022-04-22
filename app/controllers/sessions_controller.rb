@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       redirect_to root_url, notice: "#{current_user.username.capitalize}, You are successfully logged in"
     else
       flash.now[:alert] = 'Email or password is invalid'
-      render :new
+      render :new, status: :internal_server_error
     end
   end
 

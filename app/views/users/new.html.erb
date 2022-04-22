@@ -9,7 +9,7 @@
   </ul>
 <% end %>
 
-<%= form_with model: @user, data: { turbo: false } do |f| %>
+<%= form_with model: @user do |f| %>
   <div>
     <%= f.label :username %><br>
     <%= f.text_field :username %>

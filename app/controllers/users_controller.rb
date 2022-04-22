@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_url, notice: 'User successfully created'
     else
-      render :new
+      render :new, status: :internal_server_error
     end
   end
 
