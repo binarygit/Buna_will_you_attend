@@ -16,7 +16,6 @@ body {
   font-family: 'Roborto Mono', monospace, sans-serif;
   font-size: 1.6rem;
   height: 100%;
-  overflow: hidden;
 }
 
 ul {
@@ -103,6 +102,21 @@ input[type="submit"]
   }
 }
 
+.sidebar {
+  position: absolute;
+  right: 55rem;
+}
+
+.error-message {
+  border-left: 1px solid red;
+  padding: 0.5rem;
+  box-shadow: 10px 10px 15px 0px rgba(243, 6, 6, 0.3);
+
+  li {
+    padding: 0.7rem;
+  }
+}
+
 @media (max-width: 600px) {
   nav {
     padding: 4px;
@@ -110,7 +124,7 @@ input[type="submit"]
 
   .container {
     width: 100%;
-    margin-left: 1rem;
+    padding-left: 1rem;
   }
 
   form div {
@@ -119,5 +133,14 @@ input[type="submit"]
 
   input[type='submit'] {
     width: 20%;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .error-message {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
   }
 }
