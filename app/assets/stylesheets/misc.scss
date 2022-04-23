@@ -1,13 +1,14 @@
 .flash {
   padding: 6px;
+  background: #fafafa;
 }
 
 .notice {
-  background: blue;
+  border-bottom: 3px solid blue;
 }
 
 .alert {
-  background: red;
+  border-bottom: 3px solid red;
 }
 
 
