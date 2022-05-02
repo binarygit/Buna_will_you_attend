@@ -90,7 +90,7 @@ form {
   }
 }
 
-input:focus-visible {
+input:focus-visible, textarea:focus-visible {
   outline: 2px solid $yellow;
 }
 
