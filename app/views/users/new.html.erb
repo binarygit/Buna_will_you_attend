@@ -15,19 +15,19 @@
     
     <%= form_with model: @user do |f| %>
       <div>
-        <%= f.label :username %><br>
+        <%= f.label :username, class: :required %><br>
         <%= f.text_field :username %>
       </div>
       <div>
-        <%= f.label :email %><br>
+        <%= f.label :email, class: :required %><br>
         <%= f.email_field :email %>
       </div>
       <div>
-        <%= f.label :password %><br>
+        <%= f.label :password, class: :required %><br>
         <%= f.password_field :password %>
       </div>
       <div>
-        <%= f.label :password_confirmation %><br>
+        <%= f.label :password_confirmation, class: :required %><br>
         <%= f.password_field :password_confirmation %>
       </div>
       <div>
