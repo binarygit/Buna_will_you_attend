@@ -16,19 +16,19 @@
     <%= form_with model: @user do |f| %>
       <div>
         <%= f.label :username, class: :required %><br>
-        <%= f.text_field :username %>
+        <%= f.text_field :username, 'aria-required': true %>
       </div>
       <div>
         <%= f.label :email, class: :required %><br>
-        <%= f.email_field :email %>
+        <%= f.email_field :email, 'aria-required': true %>
       </div>
       <div>
         <%= f.label :password, class: :required %><br>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, 'aria-required': true %>
       </div>
       <div>
         <%= f.label :password_confirmation, class: :required %><br>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, 'aria-required': true %>
       </div>
       <div>
         <%= f.submit 'Sign Up' %>
