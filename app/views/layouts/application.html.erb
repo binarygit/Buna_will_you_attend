@@ -24,6 +24,7 @@
       <%= link_to 'will you attend?', root_path, class: :logo %>
       <ul>
         <% if logged_in? %>
+          <li><%= link_to 'Create Event', new_event_path %></li>
           <li><%= link_to :logout, logout_path %></li>
         <% else %>
           <li><%= link_to :Signup, signup_path %></li>
