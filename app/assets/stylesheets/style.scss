@@ -94,6 +94,11 @@ input:focus-visible, textarea:focus-visible {
   outline: 2px solid $yellow;
 }
 
+textarea {
+  height: 10.5rem;
+  width: 35rem;
+}
+
 .required::after {
   content: '*';
   color: red;

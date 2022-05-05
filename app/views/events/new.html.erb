@@ -1,0 +1,31 @@
+<main class="container">
+  <% unless @event.errors.empty? %>
+    <section class='error-message sidebar'>
+      <h2>Error Messages</h2>
+      <ul>
+        <% @event.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </section>
+  <% end %>
+
+  <section>
+    <h1>Create Event</h1>
+
+    <%= form_with model: @event do |f| %>
+      <div>
+        <%= f.label :title, class: :required %><br>
+        <%= f.text_field :title, 'aria-required': true %>
+      </div>
+      <div>
+        <%= f.label :description, class: :required %><br>
+        <%= f.text_area :description, 'aria-required': true %>
+      </div>
+      <div>
+        <%= f.submit %>
+      </div>
+    <% end %>
+  </section>
+</main>
+
