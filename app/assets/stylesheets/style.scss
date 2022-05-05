@@ -152,6 +152,11 @@ input[type="submit"]
   }
 }
 
+.docile-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
   nav {
     padding: 4px;
