@@ -139,9 +139,12 @@ input[type="submit"]
   border-left: 4px solid #b77800;
   max-width: 40%;
   padding: 20px;
+  margin-top: 40px;
+  cursor: pointer;
 
-  &:first-child {
-    margin-top: 15px;
+  &:nth-of-type(2n) {
+  box-shadow: 10px 10px 15px 0px rgba(243, 150, 6, 0.47);
+  border-left: 4px solid #0800ffa1;
   }
 
   p {
