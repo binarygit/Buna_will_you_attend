@@ -9,6 +9,7 @@
           <%= link_to e, class: 'docile-link' do %>
             <h3> <%= e.title %> </h3>
             <p><%= e.description.slice(0..60) + '...' %></p>
+            <p class='date'>on: <%= e.date %></p>
           <% end %>
         </li>
       <% end %>
