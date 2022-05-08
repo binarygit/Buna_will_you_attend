@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_02_073244) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_08_070530) do
   create_table "access_levels", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -23,6 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_073244) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -35,5 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_073244) do
     t.index ["access_level_id"], name: "index_users_on_access_level_id"
   end
 
+  add_foreign_key "events", "users"
   add_foreign_key "users", "access_levels"
 end

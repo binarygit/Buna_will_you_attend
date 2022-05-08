@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   belongs_to :access_level
+  has_many :events
 
   before_validation :set_access_level
 
