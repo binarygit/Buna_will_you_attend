@@ -151,8 +151,18 @@ input[type="submit"]
     margin-top: 5px;
   }
 
+  .details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+
+  .creator {
+    font-style: italic;
+
+  }
+
   .date {
-    text-align: right;
     font-weight: bold;
   }
 }
@@ -192,5 +202,9 @@ input[type="submit"]
 
   .event-card {
     max-width: 80%;
+  }
+
+  .details {
+    flex-direction: column;
   }
 }
