@@ -23,6 +23,10 @@
         <%= f.text_area :description, 'aria-required': true %>
       </div>
       <div>
+        <%= f.label :date, class: :required %><br>
+        <%= f.date_field :date, min: Date.tomorrow, 'aria-required': true %>
+      </div>
+      <div>
         <%= f.submit %>
       </div>
     <% end %>
