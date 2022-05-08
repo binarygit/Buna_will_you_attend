@@ -9,10 +9,7 @@
           <%= link_to e, class: 'docile-link' do %>
             <h3> <%= e.title %> </h3>
             <p><%= e.description.slice(0..60) + '...' %></p>
-            <div class='details'>
-              <p class='creator'>created by: <%= e.user.username %></p>
-              <p class='date'>event on: <%= e.date %></p>
-            </div>
+            <p class='date'>event on: <%= e.date %></p>
           <% end %>
         </li>
       <% end %>

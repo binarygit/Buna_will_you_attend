@@ -151,19 +151,10 @@ input[type="submit"]
     margin-top: 5px;
   }
 
-  .details {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-  }
-
-  .creator {
-    font-style: italic;
-
-  }
-
   .date {
     font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
   }
 }
 
