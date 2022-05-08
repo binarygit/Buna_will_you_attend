@@ -6,8 +6,8 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   # end
 
   test 'should login a user when correct credentials are passed' do
-    user = users(:one)
-    post sessions_url, params: { email: 'thulomama@thulomama.com', password: 'secret'}
+    user = users(:thulomama)
+    login_as(users(:thulomama))
 
     assert_redirected_to root_path
     assert_equal "#{ user.username.capitalize }, You are successfully logged in", flash.notice
@@ -15,7 +15,6 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should not login a user when incorrect credentials are passed' do
-    user = users(:one)
     post sessions_url, params: { email: 'thulomama@thulomama.com', password: 'ecret'}
 
     assert_response :internal_server_error
@@ -24,8 +23,8 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should logout user' do
-    user = users(:one)
-    post sessions_url, params: { email: 'thulomama@thulomama.com', password: 'secret'}
+    user = users(:thulomama)
+    login_as(user)
 
     delete session_url(user)
     assert_redirected_to root_path

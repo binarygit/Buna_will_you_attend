@@ -6,8 +6,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   # end
   
   test 'should create event when user is logged in' do
-    user = users(:one)
-    post sessions_url, params: { email: 'thulomama@thulomama.com', password: 'secret'}
+    login_as(users(:thulomama))
 
     assert_difference 'Event.count' do
       post events_url, params: { event: {
@@ -28,7 +27,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
                                    description: 'I am not sure right now that a minimum restriction on descriptions should be imposed.'
       }}
 
-      assert_equal 'You need to login first!', flash[:alert]
+      assert_equal 'You need to login first!', flash.alert
     end
   end
 end
