@@ -6,7 +6,8 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   # end
   
   test 'should create event when user is logged in' do
-    login_as(users(:thulomama))
+    user = users(:thulomama)
+    login_as(user)
 
     assert_difference 'Event.count' do
       post events_url, params: { event: {
