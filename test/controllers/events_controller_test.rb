@@ -13,6 +13,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
       post events_url, params: { event: {
                                    title: 'New Article',
                                    date: Date.tomorrow,
+                                   venue: 'Darpan Residency',
                                    description: 'I am not sure right now that a minimum restriction on descriptions should be imposed.' +
                                                 'Also I feel like a hundred words is a bit too much' +
                                                 'I might reduce the minimum requirement or do away with it altogether'
