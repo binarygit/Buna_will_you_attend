@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :authenticate_user, except: :index
 
   def index
-    @events = Event.all
+    @events = Event.upcoming
   end
 
   def show
