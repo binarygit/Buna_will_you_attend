@@ -1,1 +1,9 @@
-<h1>Hello!</h1>
+<main class="container">
+  <section class='show-event-card'>
+    <h1><%= @event.title %></h1>
+    <p>description: <%= @event.description %></p>
+    <p>created by: <%= @event.user.username %></p>
+    <p>event date: <%= @event.date %></p>
+    <p>venue: <%= @event.venue %></p>
+  </section>
+</main>
