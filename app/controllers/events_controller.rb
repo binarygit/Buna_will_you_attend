@@ -13,6 +13,18 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
+  def update
+    @event = Event.find(params[:id])
+
+    if params[:commit] == 'Yes, I will Attend!'
+      @event.update(attendance: true)
+    else
+      @event.update(attendance: false)
+    end
+
+    redirect_to event_path(@event)
+  end
+
   def create
     user = User.find(session[:user_id])
     @event = user.events.build(form_params)
