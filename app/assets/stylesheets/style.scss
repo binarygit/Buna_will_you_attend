@@ -178,6 +178,25 @@ input[type="submit"]
 
 }
 
+.attendance-form-wrapper {
+  margin-top: 35px;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-direction: row;
+
+  }
+
+  input[type='submit'] {
+    width: 35%;
+  }
+}
 
 @media (max-width: 600px) {
   nav {
@@ -212,5 +231,21 @@ input[type="submit"]
 
   .details {
     flex-direction: column;
+  }
+
+
+  .attendance-form-wrapper {
+    form {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type='submit'] {
+      width: 90%;
+
+      &:last-child {
+        margin-top: 25px;
+      }
+    }
   }
 }
