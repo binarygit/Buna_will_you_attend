@@ -195,7 +195,32 @@ input[type="submit"]
 
   input[type='submit'] {
     width: 35%;
+
+    &:nth-of-type(2n) {
+      border-color: red;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    &:nth-of-type(2n+1) {
+      border-color: blue;
+
+      &:hover {
+        color: blue;
+      }
+
+    }
   }
+}
+
+.happy-message {
+  color: blue;
+}
+
+.sad-message {
+  color: red;
 }
 
 @media (max-width: 600px) {

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :buna?
 
   private
 
@@ -19,5 +19,9 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     true if current_user
+  end
+
+  def buna?
+    true if current_user.access_level.name == 'privileged'
   end
 end

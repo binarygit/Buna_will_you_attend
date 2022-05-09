@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user, except: :index
+  before_action :authenticate_buna, only: :index
 
   def index
     @events = Event.upcoming

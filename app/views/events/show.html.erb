@@ -5,14 +5,21 @@
     <p>created by: <%= @event.user.username %></p>
     <p>event date: <%= @event.date %></p>
     <p>venue: <%= @event.venue %></p>
-  </section>
-
-  <section class='attendance-form-wrapper'>
-    <h2>Will Buna attend?</h2>
-
-    <%= form_with model: @event do |f| %>
-      <%= f.submit 'Yes, I will Attend!' %>
-      <%= f.submit 'Sorry, mamu does not love you enough' %>
+    <% if @event.attendance %>
+      <p class='happy-message'>Buna is attending!</p>
+    <% else %>
+      <p class='sad-message'>oooff...ummm.....</p>
     <% end %>
   </section>
+
+  <% if buna? %>
+    <section class='attendance-form-wrapper'>
+      <h2>Will Buna attend?</h2>
+
+      <%= form_with model: @event do |f| %>
+        <%= f.submit 'Yes, I will Attend!' %>
+        <%= f.submit 'Sorry, mamu does not love you enough' %>
+      <% end %>
+    </section>
+  <% end %>
 </main>
