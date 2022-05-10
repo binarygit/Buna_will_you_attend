@@ -23,7 +23,9 @@
     <nav>
       <%= link_to 'will you attend?', root_path, class: :logo %>
       <ul>
-        <% if logged_in? %>
+        <% if buna? %>
+          <li><%= link_to :logout, logout_path %></li>
+        <% elsif logged_in? %>
           <li><%= link_to 'Create Event', new_event_path %></li>
           <li><%= link_to :logout, logout_path %></li>
         <% else %>
