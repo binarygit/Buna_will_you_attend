@@ -26,4 +26,15 @@ class UsersTest < ApplicationSystemTestCase
 
     assert_text 'Error Messages'
   end
+
+  test 'logging in successfully' do
+    visit new_session_path
+
+    fill_in :email, with: 'buna@buna.com'
+    fill_in :Password, with: 'secret'
+
+    click_on 'Log In'
+
+    assert_text 'Buna, You are successfully logged in'
+  end
 end
