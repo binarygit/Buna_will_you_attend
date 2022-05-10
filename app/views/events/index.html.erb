@@ -7,6 +7,11 @@
       <% @events.each do |e| %>
         <li class='event-card'>
           <%= link_to e, class: 'docile-link' do %>
+            <% if e.attendance %>
+              <p class='status-box attending'>attending</p>
+            <% else %>
+              <p class='status-box not-attending'>not attending</p>
+            <% end %>
             <h3> <%= e.title %> </h3>
             <p><%= e.description.slice(0..60) + '...' %></p>
             <p class='date'>event on: <%= e.date %></p>
