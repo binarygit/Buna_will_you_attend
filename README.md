@@ -2,7 +2,11 @@
 
 This is an **accessible** website powered by Ruby on Rails. **Buna** is my _sanima_ (my mother's little sister), who is blind and lives in the USA. She comes to Nepal time and again to meet the family or when there's some event or festival happening. Hence, this website where my family members (or other people) can post an event and see whether Buna will attend it or not.
 
+You can login as buna using the email address `buna@buna.com` and pw `buna`.
+
 Here is the live site: https://cryptic-woodland-68204.herokuapp.com/
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/87677429/167581735-6754e312-8a08-4ea1-ba99-38fb59e2c314.gif)
 
 # Challenges
 
