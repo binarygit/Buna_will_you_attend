@@ -15,13 +15,9 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
+    will_attend = params[:commit] == 'Ofcourse, I will Attend!'
 
-    if params[:commit] == 'Ofcourse, I will Attend!'
-      @event.update(attendance: true)
-    else
-      @event.update(attendance: false)
-    end
-
+    @event.update!(attendance: will_attend)
     redirect_to event_path(@event)
   end
 

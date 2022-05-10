@@ -5,11 +5,5 @@ one:
   description: Nani is getting wed today. It is such a happy happy day, for all of us. Good Riddance.
   date: 2022-05-02
   user: thulomama 
-  attendance: false
-
-two:
-  title: MyString
-  description: MyText
-  date: 2022-05-02
-  user: thulomama
+  venue: 'Darpan Residency'
   attendance: false

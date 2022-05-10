@@ -39,9 +39,21 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     user = users(:buna)
     login_as(user)
 
-    patch event_url(event), params: { commit: 'Yes, I will Attend!' }
+    assert_not event.attendance
+    patch event_url(event), params: { commit: 'Ofcourse, I will Attend!' }
 
     event.reload
     assert event.attendance
+  end
+
+  test 'buna can choose not to attend an event' do
+    event = events(:one)
+    user = users(:buna)
+    login_as(user)
+
+    patch event_url(event), params: { commit: 'No, I will not attend' }
+
+    event.reload
+    assert_not event.attendance
   end
 end
