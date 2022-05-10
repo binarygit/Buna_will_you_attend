@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def buna?
-    true if current_user.access_level.name == 'privileged'
+    # poignant guide baby!
+    true if current_user.access_level.name == 'privileged' if current_user
   end
 end
