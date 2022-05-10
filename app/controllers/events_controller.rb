@@ -16,7 +16,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
 
-    if params[:commit] == 'Yes, I will Attend!'
+    if params[:commit] == 'Ofcourse, I will Attend!'
       @event.update(attendance: true)
     else
       @event.update(attendance: false)
