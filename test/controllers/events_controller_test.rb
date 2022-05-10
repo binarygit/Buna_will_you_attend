@@ -33,5 +33,15 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
       assert_equal 'You need to login first!', flash.alert
     end
   end
-end
 
+  test 'buna can choose to attend an event' do
+    event = events(:one)
+    user = users(:buna)
+    login_as(user)
+
+    patch event_url(event), params: { commit: 'Yes, I will Attend!' }
+
+    event.reload
+    assert event.attendance
+  end
+end

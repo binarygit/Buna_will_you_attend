@@ -5,3 +5,9 @@ thulomama:
   email: thulomama@thulomama.com
   password_digest: <%= BCrypt::Password.create("secret") %>
   access_level: ordinary
+
+buna:
+  username: buna
+  email: buna@buna.com
+  password_digest: <%= BCrypt::Password.create("secret") %>
+  access_level: privileged

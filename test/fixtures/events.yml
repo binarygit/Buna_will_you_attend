@@ -1,13 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
+  title: Nani's Wedding
+  description: Nani is getting wed today. It is such a happy happy day, for all of us. Good Riddance.
   date: 2022-05-02
   user: thulomama 
+  attendance: false
 
 two:
   title: MyString
   description: MyText
   date: 2022-05-02
   user: thulomama
+  attendance: false
